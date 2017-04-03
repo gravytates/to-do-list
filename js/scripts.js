@@ -11,6 +11,10 @@ Task.prototype.nameDate = function() {
   return this.name + ", complete by: " + this.date;
 }
 
+Task.prototype.hideTask = function() {
+  this.hide()
+}
+
 
 
 //---------------------------------------------------user interface logic
@@ -26,7 +30,7 @@ $(document).ready(function() {
 
     var newTask = new Task(inputName, inputDate, inputTime, inputSupplies, inputNotes);
 
-    $("#tasks").append("<li><span class='tasks'>" + newTask.nameDate() + "</span></li>");
+    $("#tasks").append("<li><span class='tasks'>" + newTask.nameDate() + "</span><br><div class='remove'><button class='btn btn-danger'>Remove Task</button></div></li>");
 
     $(".tasks").last().click(function(){
       $("#show-tasks").toggle();
@@ -36,8 +40,18 @@ $(document).ready(function() {
       $(".time").text(newTask.time);
       $(".supplies").text(newTask.supplies);
       $(".notes").text(newTask.notes);
-
     });
+
+    $(".remove").last().click(function(){
+      // $(this).remove();
+      $(this).parent().remove();
+      console.log(this);
+      // $("this li that is directly preceeding button").hide();
+      // $("ul").show();
+      // $("this").hide();
+      // $(".remove").hide();
+    });
+
 
     $("#new-task-name").val("");
     $("#new-date").val("");
