@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <title>Interactive To Do list:</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Things to do!</h1>
+
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Add a new Task to complete:</h2>
+          <form id="new-to-do">
+            <div class="form-group">
+              <label for="new-task-name">New Task</label>
+              <input type="text" class="form-control" id="new-task-name">
+            </div>
+
+              <div class="form-group">
+                <label for="new-date">Date task needs to be completed</label>
+                <input type="text" class="form-control" id="new-date">
+              </div>
+
+              <div class="form-group">
+                <label for="new-supplies">Supplies necessary for task</label>
+                <input type="text" class="form-control" id="new-supplies">
+              </div>
+
+
+              <div class="form-group">
+                <label for="new-notes">Additonal Notes</label>
+                <input type="text" class="form-control" id="new-notes">
+              </div>
+
+              <button type="submit" class="btn">Add Task!</button>
+          </form>
+
+          <h2>To do:</h2>
+          <ul id="tasks">
+
+          </ul>
+        </div>
+
+        <div class="col-md-6">
+          <div id="show-tasks">
+            <h2></h2>
+
+            <p>Task name: <span class="task"></span></p>
+            <p>Date by which task needs to be completed: <span class="date"></span></p>
+            <p>Necessary supplies: <span class="supplies"></span></p>
+            <p>Additional Notes: <span class="notes"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

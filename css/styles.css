@@ -1,0 +1,12 @@
+#show-tasks {
+  display: none;
+}
+
+.tasks {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+.tasks:hover {
+  text-decoration: underline;
+}
