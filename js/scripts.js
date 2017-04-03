@@ -34,7 +34,7 @@ $(document).ready(function() {
     //append task name and date with checkbox and button to indicate task accomplished and complete in unordered list. strike-through function in progress.
     $("#tasks").append("<li><label><br> <input type='checkbox' name='task' value='newTask'><span class='tasks'>"
     + newTask.nameDate()
-    + "</span></label><hr><div class='remove'><button class='btn btn-danger'>Remove Task</button></div></li>");
+    + "</span></label><br><div class='remove'><button class='btn btn-danger'>Remove Task</button></div></li><hr>");
 
     $(".tasks").last().click(function(){
       $("#show-tasks").toggle();
