@@ -1,7 +1,8 @@
 //---------------------------------------------------business logic
-function Task(name, date, supplies, notes) {
+function Task(name, date, time, supplies, notes) {
     this.name = name;
     this.date = date;
+    this.time = time;
     this.supplies = supplies;
     this.notes = notes;
 }
@@ -19,10 +20,11 @@ $(document).ready(function() {
 
     var inputName = $("#new-task-name").val();
     var inputDate = $("#new-date").val();
+    var inputTime = $("#new-time").val();
     var inputSupplies = $("#new-supplies").val();
     var inputNotes = $("#new-notes").val();
 
-    var newTask = new Task(inputName, inputDate, inputSupplies, inputNotes);
+    var newTask = new Task(inputName, inputDate, inputTime, inputSupplies, inputNotes);
 
     $("#tasks").append("<li><span class='tasks'>" + newTask.nameDate() + "</span></li>");
 
@@ -31,6 +33,7 @@ $(document).ready(function() {
       $("#show-tasks h2").text(newTask.name);
       $(".taskName").text(newTask.name);
       $(".date").text(newTask.date);
+      $(".time").text(newTask.time);
       $(".supplies").text(newTask.supplies);
       $(".notes").text(newTask.notes);
 
@@ -38,6 +41,7 @@ $(document).ready(function() {
 
     $("#new-task-name").val("");
     $("#new-date").val("");
+    $("#new-time").val("");
     $("#new-supplies").val("");
     $("#new-notes").val("");
   });
