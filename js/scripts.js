@@ -43,13 +43,7 @@ $(document).ready(function() {
     });
 
     $(".remove").last().click(function(){
-      // $(this).remove();
       $(this).parent().remove();
-      console.log(this);
-      // $("this li that is directly preceeding button").hide();
-      // $("ul").show();
-      // $("this").hide();
-      // $(".remove").hide();
     });
 
 
