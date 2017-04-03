@@ -26,6 +26,19 @@ $(document).ready(function() {
 
     $("#tasks").append("<li><span class='tasks'>" + newTask.nameDate() + "</span></li>");
 
+    $(".tasks").last().click(function(){
+      $("#show-tasks").toggle();
+      $("#show-tasks h2").text(newTask.name);
+      $(".taskName").text(newTask.name);
+      $(".date").text(newTask.date);
+      $(".supplies").text(newTask.supplies);
+      $(".notes").text(newTask.notes);
 
+    });
+
+    $("#new-task-name").val("");
+    $("#new-date").val("");
+    $("#new-supplies").val("");
+    $("#new-notes").val("");
   });
 });
