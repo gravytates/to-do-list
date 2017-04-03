@@ -10,3 +10,7 @@
 .tasks:hover {
   text-decoration: underline;
 }
+
+.strike-through {
+  text-decoration: line-through;
+}

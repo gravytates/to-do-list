@@ -30,7 +30,9 @@ $(document).ready(function() {
 
     var newTask = new Task(inputName, inputDate, inputTime, inputSupplies, inputNotes);
 
-    $("#tasks").append("<li><label> <br> <input type='checkbox' name='task' value='newTask'> <span class='tasks'>" + newTask.nameDate() + "</span> </label><br><div class='remove'><button class='btn btn-danger'>Remove Task</button></div></li>");
+
+    //append task name and date with checkbox and button to indicate task accomplished and complete in unordered list. strike-through function in progress.
+    $("#tasks").append("<li><label><br> <input type='checkbox' name='task' value='newTask'><span class='tasks'>" + newTask.nameDate() + "</span></label><br><div class='remove'><button class='btn btn-danger'>Remove Task</button></div></li>");
 
     $(".tasks").last().click(function(){
       $("#show-tasks").toggle();
@@ -44,6 +46,11 @@ $(document).ready(function() {
 
     $(".remove").last().click(function(){
       $(this).parent().remove();
+    });
+
+// target checkbox, go up a level to parent (li?), then back down to the spans that we're originally concerned with
+    $("input:checkbox[name=task]").click(function() {
+      $(this).parent().children("span").toggleClass("strike-through");
     });
 
 
