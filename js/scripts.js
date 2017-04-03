@@ -30,7 +30,7 @@ $(document).ready(function() {
 
     var newTask = new Task(inputName, inputDate, inputTime, inputSupplies, inputNotes);
 
-    $("#tasks").append("<li><span class='tasks'>" + newTask.nameDate() + "</span><br><div class='remove'><button class='btn btn-danger'>Remove Task</button></div></li>");
+    $("#tasks").append("<li><label> <br> <input type='checkbox' name='task' value='newTask'> <span class='tasks'>" + newTask.nameDate() + "</span> </label><br><div class='remove'><button class='btn btn-danger'>Remove Task</button></div></li>");
 
     $(".tasks").last().click(function(){
       $("#show-tasks").toggle();
